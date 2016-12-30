@@ -1,0 +1,200 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#div1, #div2, #div3, #div4, #div5, #div6, #div7, #div8, #div9, #div10, #div11, #div12, #div13, #div14, #div15, #div16, #div17, #div18, #div19, #div20, #div21, #div22, #div23, #div24, #div25, #div26, #div27, #div28 {
+    width: 170px;
+    height: 56.67px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+    position: absolute;
+}
+#div1, #div2, #div3, #div4, #div5, #div6, #div7 {
+    margin: 10px 0px 0px 0px;
+}
+#div2 {
+    margin-left: 191px;
+}
+#div3 {
+    margin-left: 382px;
+}
+#div4 {
+    margin-left: 573px;
+}
+#div5 {
+    margin-left: 764px;
+}
+#div6 {
+    margin-left: 955px;
+}
+#div7 {
+    margin-left: 1146px;
+}
+#div8, #div9, #div10, #div11, #div12, #div13, #div14 {
+    margin: 69.67px 0px 0px 0px;
+}
+#div9 {
+    margin-left: 191px;
+}
+#div10 {
+    margin-left: 382px;
+}
+#div11 {
+    margin-left: 573px;
+}
+#div12 {
+    margin-left: 764px;
+}
+#div13 {
+    margin-left: 955px;
+}
+#div14 {
+    margin-left: 1146px;
+}
+#div15, #div16, #div17, #div18, #div19, #div20, #div21 {
+    margin: 129.34px 0px 0px 0px;
+}
+#div16 {
+    margin-left: 191px;
+}
+#div17 {
+    margin-left: 382px;
+}
+#div18 {
+    margin-left: 573px;
+}
+#div19 {
+    margin-left: 764px;
+}
+#div20 {
+    margin-left: 955px;
+}
+#div21 {
+    margin-left: 1146px;
+}
+#div22, #div23, #div24, #div25, #div26, #div27, #div28 {
+    margin: 189.01px 0px 0px 0px;
+}
+#div23 {
+    margin-left: 191px;
+}
+#div24 {
+    margin-left: 382px;
+}
+#div25 {
+    margin-left: 573px;
+}
+#div26 {
+    margin-left: 764px;
+}
+#div27 {
+    margin-left: 955px;
+}
+#div28 {
+    margin-left: 1146px;
+}
+
+#drag1 {
+    margin: 278.68px 0px 0px 0px;
+    position: absolute;
+}
+#drag2 {
+    margin: 278.68px 0px 0px 100px;
+    position: absolute;
+}
+
+#dropContainer {
+    width: 170px;
+    height: 56.67px;
+    margin: 338.35px 0px 0px 100px;
+    background: purple;
+    position: absolute;
+}
+</style>
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    if (!ev.ctrlKey) {
+        var nodeCopy = document.getElementById(data).cloneNode(true);
+        nodeCopy.id = "newId"; /* We cannot use the same ID */
+        ev.target.appendChild(nodeCopy);
+    }
+    else {
+        ev.target.appendChild(document.getElementById(data));
+    }
+}
+
+function tapTap() {
+    alert("hey");
+    // obj.removeNode(true);
+}
+
+// var dragged;
+
+// document.getElementById('droppable').addEventListener('dragenter', function (e) { e.preventDefault() });
+// document.getElementById('droppable').addEventListener('dragover', function (e) { e.preventDefault() });
+// document.getElementById('dropContainer').addEventListener('drop', function (e) {
+//     e.preventDefault();
+//     alert(e.dataTransfer.getData('Text'));
+//     dragged.parentNode.removeChild(dragged);
+
+// var draggables = document.querySelectorAll('[draggable=true]');
+// for (var i = 0; i < draggables.length; i++) {
+//     draggables[i].addEventListener("dragstart", function (e) {        
+//         dragged = this;
+//         e.dataTransfer.setData('Text', this.getAttribute('data-letter')); });
+// }
+// });
+</script>
+</head>
+<body>
+
+<p>Drag the box image into the columns:</p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<div id="div8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div9" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div10" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div11" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div12" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div13" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div14" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<div id="div15" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div16" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div17" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div18" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div19" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div20" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div21" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<div id="div22" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div23" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div24" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div25" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div26" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div27" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div28" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+<img id="drag1" src="80x80.png" draggable="true" ondragstart="drag(event)" width="56.67" height="56.67" ondblclick="tapTap()">
+<img id="drag2" src="80x80.png" draggable="true" ondragstart="drag(event)" width="85" height="56.67">
+
+<div id="dropContainer"></div>
+</body>
+</html>
