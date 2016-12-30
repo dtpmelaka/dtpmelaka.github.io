@@ -95,11 +95,11 @@
 }
 
 #drag1 {
-    margin: 278.68px 0px 0px 0px;
+    margin: 290px 0px 0px 484.165px;
     position: absolute;
 }
 #drag2 {
-    margin: 278.68px 0px 0px 100px;
+    margin: 290px 0px 0px 584.165px;
     position: absolute;
 }
 
@@ -113,6 +113,11 @@
 }
 </style>
 <script>
+var full1, full2, full2, full4, full5, full6, full7 = 0;
+var full8, full9, full10, full11, full12, full13, full14 = 0;
+var full15, full16, full17, full18, full19, full20, full21 = 0;
+var full22, full23, full24, full25, full26, full27, full28 = 0;
+
 function allowDrop(ev) {
     ev.preventDefault();
 }
@@ -126,8 +131,19 @@ function drop(ev) {
     var data = ev.dataTransfer.getData("text");
     if (!ev.ctrlKey) {
         var nodeCopy = document.getElementById(data).cloneNode(true);
-        nodeCopy.id = Math.floor((Math.random() * 10000)); /* We cannot use the same ID */
-        ev.target.appendChild(nodeCopy);
+        var num = parseInt(ev.target.getAttributeNode('curr').value);
+        if (data == 'drag1' && num < 9) {
+            nodeCopy.id = Math.floor((Math.random() * 10000));
+            ev.target.setAttribute('curr', num + 4);
+            ev.target.appendChild(nodeCopy);
+        }
+        else if (data == 'drag2' && num < 7) {
+            nodeCopy.id = Math.floor((Math.random() * 10000) + 10000);
+            ev.target.setAttribute('curr', num + 6);
+            ev.target.appendChild(nodeCopy);
+        }
+        else {
+        }
     }
     else {
         ev.target.appendChild(document.getElementById(data));
@@ -135,6 +151,13 @@ function drop(ev) {
 }
 
 function tapTap(e) {
+    var num = parseInt(e.parentNode.getAttributeNode('curr').value);
+    if (e.id < 10000) {
+        e.parentNode.setAttribute('curr', num - 4);
+    }
+    else {
+        e.parentNode.setAttribute('curr', num - 6);
+    }
     e.parentNode.removeChild(e);
 }
 </script>
@@ -143,39 +166,39 @@ function tapTap(e) {
 
 <p>Drag the box image into the columns:</p>
 
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="div5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="div6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="div7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
+<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
+<div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
+<div id="div5" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
+<div id="div6" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
+<div id="div7" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
 <br>
-<div id="div8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="div9" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="div10" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="div11" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="div12" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="div13" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="div14" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div8" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
+<div id="div9" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
+<div id="div10" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
+<div id="div11" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
+<div id="div12" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
+<div id="div13" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
+<div id="div14" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
 <br>
-<div id="div15" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="div16" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="div17" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="div18" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="div19" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="div20" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="div21" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div15" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
+<div id="div16" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
+<div id="div17" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
+<div id="div18" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
+<div id="div19" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
+<div id="div20" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
+<div id="div21" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
 <br>
-<div id="div22" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="div23" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="div24" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="div25" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="div26" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="div27" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div id="div28" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="div22" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
+<div id="div23" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
+<div id="div24" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
+<div id="div25" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
+<div id="div26" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
+<div id="div27" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
+<div id="div28" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
 
-<img id="drag1" src="80x80.png" draggable="true" ondragstart="drag(event)" width="56.67" height="56.67" ondblclick="tapTap(this)">
-<img id="drag2" src="80x80.png" draggable="true" ondragstart="drag(event)" width="85" height="56.67" ondblclick="tapTap(this)"  >
+<img id="drag1" src="80x80.png" draggable="true" ondragstart="drag(event)" width="56.67" height="56.67" ondblclick="tapTap(this)" weight=4>
+<img id="drag2" src="80x80.png" draggable="true" ondragstart="drag(event)" width="85" height="56.67" ondblclick="tapTap(this)" weight=6>
 </body>
 </html>
