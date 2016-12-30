@@ -107,6 +107,7 @@
     width: 170px;
     height: 56.67px;
     margin: 338.35px 0px 0px 100px;
+    padding: 10px;
     background: purple;
     position: absolute;
 }
@@ -125,7 +126,7 @@ function drop(ev) {
     var data = ev.dataTransfer.getData("text");
     if (!ev.ctrlKey) {
         var nodeCopy = document.getElementById(data).cloneNode(true);
-        nodeCopy.id = "newId"; /* We cannot use the same ID */
+        nodeCopy.id = Math.floor((Math.random() * 10000)); /* We cannot use the same ID */
         ev.target.appendChild(nodeCopy);
     }
     else {
@@ -133,27 +134,9 @@ function drop(ev) {
     }
 }
 
-function tapTap() {
-    alert("hey");
-    // obj.removeNode(true);
+function tapTap(e) {
+    e.parentNode.removeChild(e);
 }
-
-// var dragged;
-
-// document.getElementById('droppable').addEventListener('dragenter', function (e) { e.preventDefault() });
-// document.getElementById('droppable').addEventListener('dragover', function (e) { e.preventDefault() });
-// document.getElementById('dropContainer').addEventListener('drop', function (e) {
-//     e.preventDefault();
-//     alert(e.dataTransfer.getData('Text'));
-//     dragged.parentNode.removeChild(dragged);
-
-// var draggables = document.querySelectorAll('[draggable=true]');
-// for (var i = 0; i < draggables.length; i++) {
-//     draggables[i].addEventListener("dragstart", function (e) {        
-//         dragged = this;
-//         e.dataTransfer.setData('Text', this.getAttribute('data-letter')); });
-// }
-// });
 </script>
 </head>
 <body>
@@ -192,9 +175,7 @@ function tapTap() {
 <div id="div27" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 <div id="div28" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
-<img id="drag1" src="80x80.png" draggable="true" ondragstart="drag(event)" width="56.67" height="56.67" ondblclick="tapTap()">
-<img id="drag2" src="80x80.png" draggable="true" ondragstart="drag(event)" width="85" height="56.67">
-
-<div id="dropContainer"></div>
+<img id="drag1" src="80x80.png" draggable="true" ondragstart="drag(event)" width="56.67" height="56.67" ondblclick="tapTap(this)">
+<img id="drag2" src="80x80.png" draggable="true" ondragstart="drag(event)" width="85" height="56.67" ondblclick="tapTap(this)"  >
 </body>
 </html>
