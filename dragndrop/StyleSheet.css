@@ -112,3 +112,9 @@
     margin: 360px 0px 0px 584.165px;
     position: absolute;
 }
+
+#download {
+    margin: 390px 0px 0px 584.165px;
+    position: absolute;
+    visibility: hidden;
+}
