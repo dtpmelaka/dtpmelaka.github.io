@@ -1,51 +1,50 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-    <link rel="stylesheet" href="StyleSheet.css">
-    <link rel="stylesheet" href="jquery-ui.min.css">
-    <script src="external/jquery/jquery.js"></script>
-    <script src="jquery-ui.min.js"></script>
-    <script src="JavaScript.js" type="text/javascript"></script>
-</head>
-<body>
-    <p>Drag the box image into the columns:</p>
+    <head>
+        <link rel="stylesheet" href="jquery-ui.min.css">
+        <link rel="stylesheet" href="StyleSheet.css">
+        <script src="external/jquery/jquery.js"></script>
+        <script src="jquery-ui.min.js"></script>
+        <script src="JavaScript.js" type="text/javascript"></script>
+    </head>
+    <body>
+    <h3>Drag the box image into the columns:</h3>
+    <table class="dropable"><tbody>
+        <tr>
+            <td id="div1"></td>
+            <td id="div2"></td>
+            <td id="div3"></td>
+            <td id="div4"></td>
+            <td id="div5"></td>
+            <td id="div6"></td>
+        </tr>
+        <tr>
+            <td id="div7"></td>
+            <td id="div8"></td>
+            <td id="div9"></td>
+            <td id="div10"></td>
+            <td id="div11"></td>
+            <td id="div12"></td>
+        </tr>
+        <tr>
+            <td id="div13"></td>
+            <td id="div14"></td>
+            <td id="div15"></td>
+            <td id="div16"></td>
+            <td id="div17"></td>
+            <td id="div18"></td>
+        </tr>
+        <tr>
+            <td id="div19"></td>
+            <td id="div20"></td>
+            <td id="div21"></td>
+            <td id="div22"></td>
+            <td id="div23"></td>
+            <td id="div24"></td>
+        </tr>
+    </tbody></table>
 
-    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
-    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
-    <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
-    <div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
-    <div id="div5" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
-    <div id="div6" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
-    <div id="div7" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
-    <br>
-    <div id="div8" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
-    <div id="div9" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
-    <div id="div10" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
-    <div id="div11" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
-    <div id="div12" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
-    <div id="div13" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
-    <div id="div14" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
-    <br>
-    <div id="div15" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
-    <div id="div16" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
-    <div id="div17" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
-    <div id="div18" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
-    <div id="div19" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
-    <div id="div20" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
-    <div id="div21" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
-    <br>
-    <div id="div22" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
-    <div id="div23" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
-    <div id="div24" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
-    <div id="div25" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
-    <div id="div26" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
-    <div id="div27" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
-    <div id="div28" ondrop="drop(event)" ondragover="allowDrop(event)" curr=0></div>
-
-    <img id="drag1" src="80x80.png" draggable="true" ondragstart="drag(event)" width="56.67" height="56.67" ondblclick="tapTap(this)" weight=4>
-    <img id="drag2" src="80x80.png" draggable="true" ondragstart="drag(event)" width="85" height="56.67" ondblclick="tapTap(this)" weight=6>
-
-    <a id="generate"class="btn btn-success" href="javascript:void(0);" onClick="capture();">Generate Screenshot &raquo;</a>
-    <a id="download" download="file.png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAioAAAO0CAYAAACLKx00">text</a>
-</body>
+    <img id="drag1" src="80x80.png" width="56.67" height="56.67" weight=4>
+    <img id="drag2" src="80x80.png" width="85" height="56.67" weight=6>
+    </body>
 </html>
