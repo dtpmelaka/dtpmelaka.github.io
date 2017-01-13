@@ -9,42 +9,50 @@
     </head>
     <body>
     <h3>Drag the box image into the columns:</h3>
-    <table class="dropable"><tbody>
-        <tr>
+    <table class="dropable" width="1360px"><tbody>
+        <tr style="background-color:#dddddd">
             <td id="div1"></td>
             <td id="div2"></td>
             <td id="div3"></td>
             <td id="div4"></td>
             <td id="div5"></td>
             <td id="div6"></td>
+            <td id="div7"></td>
         </tr>
         <tr>
-            <td id="div7"></td>
             <td id="div8"></td>
             <td id="div9"></td>
             <td id="div10"></td>
             <td id="div11"></td>
             <td id="div12"></td>
-        </tr>
-        <tr>
             <td id="div13"></td>
             <td id="div14"></td>
+        </tr>
+        <tr style="background-color:#dddddd">
             <td id="div15"></td>
             <td id="div16"></td>
             <td id="div17"></td>
             <td id="div18"></td>
-        </tr>
-        <tr>
             <td id="div19"></td>
             <td id="div20"></td>
             <td id="div21"></td>
+        </tr>
+        <tr>
             <td id="div22"></td>
             <td id="div23"></td>
             <td id="div24"></td>
+            <td id="div25"></td>
+            <td id="div26"></td>
+            <td id="div27"></td>
+            <td id="div28"></td>
         </tr>
     </tbody></table>
 
-    <img id="drag1" src="80x80.png" width="56.67" height="56.67" weight=4>
-    <img id="drag2" src="80x80.png" width="85" height="56.67" weight=6>
+    <img id="drag_s" src="80x80.png" width="56.67" height="56.67" weight=4 ondblclick="deleteImg(this)">
+    <img id="drag_b" src="80x80.png" width="85" height="56.67" weight=6 ondblclick="deleteImg(this)">
+
+    <div id="container">
+        <div id="drop_container">Extra crates<div id="drop_zone"></div></div>
+    </div>
     </body>
 </html>
